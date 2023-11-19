@@ -1,0 +1,54 @@
+{
+  "name": "ssr_project",
+  "version": "1.0.0",
+  "description": "ssr spa",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development webpack serve --env builType=client",
+    "ssr:build": "NODE_ENV=development webpack --env builType=server --config webpack.config.js",
+    "ssr:start": "NODE_ENV=development ts-node --esm build/server",
+    "ssr": "npm run ssr:build && npm run ssr:start",
+    "build": "NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/girlinwonderland/SSR.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/girlinwonderland/SSR/issues"
+  },
+  "homepage": "https://github.com/girlinwonderland/SSR#readme",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.1.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "compression": "^1.7.4",
+    "concurrently": "^8.2.2",
+    "express": "^4.18.2",
+    "express-http-proxy": "^2.0.0",
+    "nodemon": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-redux": "^8.1.3",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^6.18.0",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
+    "serialize-javascript": "^6.0.1",
+    "webpack": "^5.89.0",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.10.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
